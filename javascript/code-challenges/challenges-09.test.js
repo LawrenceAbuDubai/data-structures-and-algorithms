@@ -60,7 +60,8 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  let num = Object.entries(obj).map(item => item.join(': '));
+  return num;
 };
 
 
@@ -143,8 +144,9 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
-};
+  let hasChildren = false;
+  Object.values(arr).forEach(element => element.children && element.name.includes(character) ? hasChildren = true : hasChildren );
+  return hasChildren;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
